@@ -1,5 +1,7 @@
 FROM node:18-slim AS build
 
+ENV BASE_PATH=/meilisearch/
+
 # Setting working directory.
 WORKDIR /opt/meilisearch-ui
 
