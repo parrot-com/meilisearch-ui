@@ -1,5 +1,7 @@
 FROM node:22
 
+ENV BASE_PATH=/meilisearch/
+
 # Setting working directory.
 WORKDIR /opt/meilisearch-ui
 
