@@ -1,4 +1,4 @@
-FROM node:22
+FROM node:22 AS build
 
 ENV BASE_PATH=/meilisearch/
 
@@ -13,10 +13,18 @@ COPY . .
 # Installing dependencies
 RUN pnpm install
 
-EXPOSE 24900
+# Build the app
+RUN pnpm run build
 
 ENV NODE_ENV=prod
 
 RUN ["chmod", "+x", "./scripts/cmd.sh"]
 ENTRYPOINT ["./scripts/cmd.sh"]
 
+# -------
+FROM nginx
+
+COPY --from=build /opt/meilisearch-ui/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 24900
