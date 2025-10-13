@@ -1,17 +1,9 @@
 {
-  "fieldDistribution": {
-    "label": "Field Distribution",
-    "subtitle": "Go to official docs about “Field Distribution”"
-  },
-  "count": "Count",
-  "add_documents": "Add documents",
-  "indexing": "Indexing",
-  "indexing_tip": "This index is indexing documents, setting & search results may be incorrect now!",
-  "empty_area_tip": "Select or Create a index on the left to start",
+  "upload_documents": "Upload documents",
   "delete_document": "Delete document",
   "delete": {
-    "tip": "Are you sure you want to delete this",
-    "require_primaryKey": "Document deletion require the valid primaryKey in index {{indexId}}"
+    "tip": "Are you sure you want to <strong>delete this document from index {{indexId}} with primaryKey {{primaryKey}}?</strong>",
+    "require_primaryKey": "Document deletion require the valid primaryKey "
   },
   "edit_document": "Edit document",
   "search": {
@@ -35,10 +27,30 @@
       "sort": {
         "label": "Sort",
         "tip": "use half-width comma(',') to separate multi sort expression and order"
+      },
+      "autoRefresh": {
+        "label": "Auto Refresh",
+        "tip": "After turning it on, the search results will be automatically refreshed (every 7 seconds, when filter conditions change, when the network environment changes). This option will increase QPS. Please pay attention to paid instances!"
+      },
+      "showRankingScore": {
+        "label": "Show Ranking Score",
+        "tip": "This option is only support showRankingScore parameters instance (> v1.3.0) effectively, the _rankingScore field will appear in the returned search results when enabled, please refer to the official document for the meaning of this parameter"
+      },
+      "hybrid": {
+        "label": "Hybrid Search",
+        "embedder": "Embedder",
+        "semanticRatio": "Semantic Ratio",
+        "embedder_required": "Embedder is required"
       }
     },
     "results": {
       "label": "Results",
+      "download": "Download results",
+      "type": {
+        "json": "JSON",
+        "table": "Table",
+        "grid": "Grid"
+      },
       "total_hits": "total {{estimatedTotalHits}} hits",
       "processing_time": "in {{processingTimeMs}} ms"
     }

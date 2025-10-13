@@ -1,4 +1,6 @@
-FROM node:18-slim AS build
+FROM node:22 AS build
+
+ENV BASE_PATH=/meilisearch/
 
 ENV BASE_PATH=/meilisearch/
 
@@ -14,7 +16,12 @@ COPY . .
 RUN pnpm install
 
 # Build the app
-RUN npm run build
+RUN pnpm run build
+
+ENV NODE_ENV=prod
+
+RUN ["chmod", "+x", "./scripts/cmd.sh"]
+ENTRYPOINT ["./scripts/cmd.sh"]
 
 # -------
 FROM nginx

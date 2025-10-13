@@ -1,4 +1,5 @@
 {
+  "empty": "空空如也",
   "or": "或",
   "unknown": "未知",
   "uploading": "上传中",
@@ -7,6 +8,7 @@
   "submit": "提交",
   "forever": "永久",
   "actions": "操作",
+  "detail": "详情",
   "create": "创建",
   "delete": "删除",
   "update": "更新",
@@ -15,6 +17,7 @@
   "edit": "编辑",
   "system": "系统",
   "instance": "实例",
+  "documents": "文档",
   "settings": "设置",
   "tasks": "任务",
   "indexes": "索引",
@@ -28,6 +31,14 @@
   "updated_at": "更新于",
   "expired_at": "过期于",
   "learn_more": "更多",
+  "type": "类型",
+  "status": "状态",
+  "dashboard": "仪表盘",
+  "version": "版本",
+  "none": "暂无",
+  "singleton_mode": "单实例模式",
+  "enable": "启用",
+  "disable": "禁用",
   "toast": {
     "fail": "失败, {{msg}}"
   }

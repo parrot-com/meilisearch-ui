@@ -1,5 +1,6 @@
 {
-  "or": "OR",
+  "empty": "Empty",
+  "or": "or",
   "unknown": "Unknown",
   "uploading": "Uploading",
   "search": "Search",
@@ -7,6 +8,7 @@
   "submit": "Submit",
   "forever": "Forever",
   "actions": "Actions",
+  "detail": "Detail",
   "create": "Create",
   "delete": "Delete",
   "update": "Update",
@@ -15,6 +17,7 @@
   "edit": "Edit",
   "system": "System",
   "instance": "Instance",
+  "documents": "Documents",
   "settings": "Settings",
   "tasks": "Tasks",
   "indexes": "Indexes",
@@ -27,8 +30,16 @@
   "created_at": "Created At",
   "updated_at": "Updated At",
   "expired_at": "Expired At",
-  "learn_more": "Learn more",
+  "learn_more": "Learn More",
+  "type": "Type",
+  "status": "Status",
+  "dashboard": "Dashboard",
+  "version": "Version",
+  "none": "None",
+  "singleton_mode": "Singleton Mode",
+  "enable": "Enable",
+  "disable": "Disable",
   "toast": {
-    "fail": "Fail, {{msg}}"
+    "fail": "Failed, {{msg}}"
   }
 }

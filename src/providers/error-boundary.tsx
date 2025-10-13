@@ -1,12 +1,16 @@
-import type { FC, ReactNode } from 'react';
+import type { FC, ReactNode } from "react";
 
-import { ReactErrorBoundary } from '@/src/components/ErrorBoundary';
-import { AppFallback } from '@/src/components/ErrorBoundary/Fallback';
+import { ReactErrorBoundary } from "@/components/common/error-boundary";
+import { AppFallback } from "@/components/common/error-boundary/fallback";
 
 type Props = {
-  children: ReactNode;
+	children: ReactNode;
 };
 
 export const ErrorBoundaryProvider: FC<Props> = ({ children }) => {
-  return <ReactErrorBoundary FallbackComponent={AppFallback}>{children}</ReactErrorBoundary>;
+	return (
+		<ReactErrorBoundary FallbackComponent={AppFallback}>
+			{children}
+		</ReactErrorBoundary>
+	);
 };
